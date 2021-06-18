@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Let's play a game! Answer the following questions.</p>
+<p>Each consequtive question is formed using your previous answer as a "key" of sorts. So if you're getting an invalid url or something, one of your previous answers is incorrect. Please reload the page and try again!</p>
+<p>Solve this anagram: imnae. Hint: It's very popular in this discord server</p>
+<input type="text" id="q01" name="q01">
+<button onclick="q01()">Submit</button>
+
+<script>
+function q01() {
+    var x = document.createElement("p");
+    x.innerHTML = "https://twitter.com/nhk_" + document.getElementById("q01").value + "world/status/1376195933260685320";
+    document.body.appendChild(x);
+
+    x = document.createElement("p");
+    x.innerHTML = "What is the number on the picture in this tweet?";
+    document.body.appendChild(x);
+
+    x = document.createElement("input");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "q02");
+
+    document.body.appendChild(x);
+
+    x = document.createElement("button");
+    x.innerHTML = "Submit"
+    x.setAttribute("onclick", "q02()");
+
+    document.body.appendChild(x);
+}
+
+function q02() {
+    var secret = String.fromCharCode(96+(document.getElementById("q02").value % 26)-4);
+    var x = document.createElement("p");
+    x.innerHTML = "https://www.youtube.com/watch?v=v" + secret + "kG" + secret + "X" + secret + "DlQA";
+    document.body.appendChild(x);
+
+    x = document.createElement("p");
+    x.innerHTML = "Wow look at the time! How many times is the word 'time' mentioned (verbally) in this video?";
+    document.body.appendChild(x);
+
+    x = document.createElement("input");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "q03");
+
+    document.body.appendChild(x);
+
+    x = document.createElement("button");
+    x.innerHTML = "Submit"
+    x.setAttribute("onclick", "q03()");
+
+    document.body.appendChild(x);
+}
+
+function q03() {
+    var x = document.createElement("p");
+    x.innerHTML = "https://store.steampowered.com/agecheck/app/109" + (document.getElementById("q03").value - 14) + "00/";
+    document.body.appendChild(x);
+
+    x = document.createElement("p");
+    x.innerHTML = "What is the year this game takes place in? Hint: This should be pretty obvious, if it isn't, your previous answer is probably wrong. Go watch the video again :)";
+    document.body.appendChild(x);
+
+    x = document.createElement("input");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "q04");
+
+    document.body.appendChild(x);
+
+    x = document.createElement("button");
+    x.innerHTML = "Submit"
+    x.setAttribute("onclick", "q04()");
+
+    document.body.appendChild(x);
+}
+
+function q04() {
+    var secret = String.fromCharCode(96+(document.getElementById("q04").value % 26));
+    var x = document.createElement("p");
+    x.innerHTML = "https://www.youtube.com/watch?v=dQ" + secret + "4" + secret + "9WgXcQ";
+    document.body.appendChild(x);
+
+    x = document.createElement("p");
+    x.innerHTML = "Congrats! This is the final question. The answer to the following question should be your final answer";
+    document.body.appendChild(x);
+
+    x = document.createElement("p");
+    x.innerHTML = "Who is the artist of this song? (Private message me with your answer)";
+    document.body.appendChild(x);
+}
+</script>
+
+</body>
+</html>
